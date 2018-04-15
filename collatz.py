@@ -11,8 +11,11 @@ def collatz(number):
 
 def collatzSequence():
     print('Enter your number.')
-    number = int(input())
-    while number != 1:
-        number = collatz(number)
+    try:
+        number = int(input())
+        while number != 1:
+            number = collatz(number)
+    except ValueError:
+        print('You must enter an integer')
 
 collatzSequence()
