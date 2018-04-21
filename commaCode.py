@@ -9,7 +9,9 @@ def spam_Check(spam):
         e = ''
         for i in spam:
             e += i
-            e += ' '
+            if i == spam[-1]:
+                break
+            e += ', '
         print(e)
     except Exception as Err:
         print('Please insert the proper list: ', Err)
